@@ -72,17 +72,19 @@ button {
     }
 
     .wrapper {
-        width: 80%;
+        width: 90%;
     }
 
     .wrapper div {
-        width: 80%;
+        width: 90%;
     }
 
     button {
         width: 2em;
         height: 2em;
-        font-size: 1em;
+        text-align: center;
+        align-items: center;
+        display: flex;
     }
 
     .zero {

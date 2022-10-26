@@ -1,6 +1,6 @@
 # Calculadora
 
-<img src="telaPrincipal.jpeg" alt="Imagem da tela">
+<img src="fotoPrincipal.jpeg" alt="Imagem da tela">
 
 > Projeto simples de calculadora, inspirada no design do conhecido aplicativo do IOS.
 

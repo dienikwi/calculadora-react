@@ -82,9 +82,13 @@ button {
     button {
         width: 2em;
         height: 2em;
-        text-align: center;
-        align-items: center;
         display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    button span {
+        margin: auto;
     }
 
     .zero {

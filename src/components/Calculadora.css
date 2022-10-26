@@ -58,7 +58,7 @@ button {
     margin-right: 5%;
     font-size: 50px;
     margin-bottom: 0;
-    
+
 }
 
 .resultado {
@@ -82,13 +82,7 @@ button {
     button {
         width: 2em;
         height: 2em;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
-    button span {
-        margin: auto;
+        /* padding: 2.5%; */
     }
 
     .zero {

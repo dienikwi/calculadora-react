@@ -6,11 +6,11 @@ export default function Calculadora() {
     const [num, setNum] = useState('');
     const [numAntigo, setNumAntigo] = useState('');
     const [operacao, setOperacao] = useState('');
-    const [result, setResult] = useState(0);
+    const [result, setResult] = useState('');
 
     function inputNum(e) {
         var input = e.target.value;
-        if (num != ('')) {
+        if (num !== ('')) {
             setNum(num + input);
         } else {
             setNum(input);
@@ -29,11 +29,11 @@ export default function Calculadora() {
     }
 
     function porcentagem() {
-        setNum(num / 100);
+        setNum(parseFloat(num) / 100);
     }
 
     function inverteSinal() {
-        setNum(num * -1);
+        setNum(parseFloat(num) * -1);
     }
 
     function calcula() {
@@ -62,37 +62,37 @@ export default function Calculadora() {
                         <h1 className="valor"> {num} </h1>
                     </div>
                     <div>
-                        <button className="bt-cinza" onClick={clear}><span>AC</span></button>
-                        <button className="bt-cinza" onClick={inverteSinal}><span>+/-</span></button>
-                        <button className="bt-cinza" onClick={porcentagem}><span>%</span></button>
-                        <button className="bt-laranja" onClick={inputOperacao} value={"/"}><span>/</span></button>
+                        <button className="bt-cinza" onClick={clear}>AC</button>
+                        <button className="bt-cinza" onClick={inverteSinal}>+/-</button>
+                        <button className="bt-cinza" onClick={porcentagem}>%</button>
+                        <button className="bt-laranja" onClick={inputOperacao} value={"/"}>/</button>
                     </div>
 
                     <div>
-                        <button className="bt-cinza" onClick={inputNum} value={7}><span>7</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={8}><span>8</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={9}><span>9</span></button>
-                        <button className="bt-laranja" onClick={inputOperacao} value={"x"}><span>X</span></button>
+                        <button className="bt-cinza" onClick={inputNum} value={7}>7</button>
+                        <button className="bt-cinza" onClick={inputNum} value={8}>8</button>
+                        <button className="bt-cinza" onClick={inputNum} value={9}>9</button>
+                        <button className="bt-laranja" onClick={inputOperacao} value={"x"}>X</button>
                     </div>
 
                     <div>
-                        <button className="bt-cinza" onClick={inputNum} value={4}><span>4</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={5}><span>5</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={6}><span>6</span></button>
-                        <button className="bt-laranja" onClick={inputOperacao} value={"-"}><span>-</span></button>
+                        <button className="bt-cinza" onClick={inputNum} value={4}>4</button>
+                        <button className="bt-cinza" onClick={inputNum} value={5}>5</button>
+                        <button className="bt-cinza" onClick={inputNum} value={6}>6</button>
+                        <button className="bt-laranja" onClick={inputOperacao} value={"-"}>-</button>
                     </div>
 
                     <div>
-                        <button className="bt-cinza" onClick={inputNum} value={1}><span>1</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={2}><span>2</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={3}><span>3</span></button>
-                        <button className="bt-laranja" onClick={inputOperacao} value={"+"}><span>+</span></button>
+                        <button className="bt-cinza" onClick={inputNum} value={1}>1</button>
+                        <button className="bt-cinza" onClick={inputNum} value={2}>2</button>
+                        <button className="bt-cinza" onClick={inputNum} value={3}>3</button>
+                        <button className="bt-laranja" onClick={inputOperacao} value={"+"}>+</button>
                     </div>
 
                     <div>
-                        <button className="bt-cinza zero" onClick={inputNum} value={0}><span>0</span></button>
-                        <button className="bt-cinza" onClick={inputNum} value={"."}><span>,</span></button>
-                        <button className="bt-laranja" onClick={calcula}><span>=</span></button>
+                        <button className="bt-cinza zero" onClick={inputNum} value={0}>0</button>
+                        <button className="bt-cinza" onClick={inputNum} value={"."}>,</button>
+                        <button className="bt-laranja" onClick={calcula}>=</button>
                     </div>
                 </div>
             </div>
